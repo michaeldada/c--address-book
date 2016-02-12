@@ -52,6 +52,10 @@ namespace AddressBook.Objects
     {
       return _contactList;
     }
+    public static Contact GetContactById(int id)
+    {
+      return _contactList[id];
+    }
     public static void ClearAll()
     {
       _contactList.Clear();

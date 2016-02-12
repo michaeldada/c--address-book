@@ -18,7 +18,12 @@ namespace AddressBook
     };
       Get["/clearAll"] = _ => {
         Contact.ClearAll();
-        return View["/"];
+        return View["/contactsDeleted.cshtml"];
+      };
+
+      Get["/contact/{id}"] = parameter => {
+        Contact clickedContact = Contact.GetContactById(parameter.id);
+        return View["viewContact.cshtml", clickedContact];
       };
       Post["/newContactAdded"] = _ => {
         Contact addedContact = new Contact(Request.Form["name"], Request.Form["number"], Request.Form["address"]);
