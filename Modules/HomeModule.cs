@@ -13,3 +13,6 @@ namespace AddressBook
       Get["/"] = _ => {
       View["index.cshtml", Contact.GetAll()];
     };
+}
+}
+}
