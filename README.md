@@ -6,7 +6,7 @@
 
 ## Description
 
-_This app allows you to add contacts to an address book.  It allows you to save their name, phone number and address.  You can see a list of contact names on the home page, and click on a name to see more information about that contact.  You can also remove all contacts with the 'Clear Contacts' link below the list. _
+_This app allows you to add contacts to an address book.  It allows you to save their name, phone number and address.  You can see a list of contact names on the home page, and click on a name to see more information about that contact.  You can also remove all contacts with the 'Clear Contacts' link below the list._
 
 ## Setup/Installation Requirements
 
