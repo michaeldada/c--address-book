@@ -11,4 +11,5 @@ namespace AddressBook
     public HomeModule()
     {
       Get["/"] = _ => {
-      
+      View["index.cshtml", Contact.GetAll()];
+    };
