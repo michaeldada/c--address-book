@@ -7,6 +7,7 @@ namespace AddressBook.Objects
     private string _name;
     private string _number;
     private string _address;
+    private int _id;
     private static List<Contact> _contactList = new List<Contact> {};
 
     public Contact(string name, string number, string address)
@@ -15,6 +16,7 @@ namespace AddressBook.Objects
       this.SetNumber(number);
       this.SetAddress(address);
 
+      _id = _contactList.Count;
       _contactList.Add(this);
     }
 
@@ -29,6 +31,10 @@ namespace AddressBook.Objects
     public string GetAddress()
     {
       return _address;
+    }
+    public int GetId()
+    {
+      return _id;
     }
     public void SetName(string name)
     {
@@ -50,3 +56,5 @@ namespace AddressBook.Objects
     {
       _contactList.Clear();
     }
+  }
+}
