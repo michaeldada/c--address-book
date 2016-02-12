@@ -11,12 +11,19 @@ namespace AddressBook
     public HomeModule()
     {
       Get["/"] = _ => {
-      View["index.cshtml", Contact.GetAll()];
+      return View["index.cshtml", Contact.GetAll()];
     };
       Get["/addContactForm"] = _ => {
-      View["addContactForm.cshtml"];
+      return View["addContactForm.cshtml"];
     };
-
+      Get["/clearAll"] = _ => {
+        Contact.ClearAll();
+        return View["/"];
+      };
+      Post["/newContactAdded"] = _ => {
+        Contact addedContact = new Contact(Request.Form["name"], Request.Form["number"], Request.Form["address"]);
+        return View["newContactAdded.cshtml", addedContact];
+      };
 }
 }
 }
